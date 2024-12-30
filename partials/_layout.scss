@@ -29,7 +29,7 @@
 
 .hero{
     color: $white-normal;
-    min-height: 70vh;
+    min-height: 80vh;
 
     display: flex;
     justify-content: center;
@@ -141,8 +141,5 @@
 @media screen and (max-width:768px){
     .about-content{
         flex-direction: column;
-    }
-    .about-description{
-        text-align: center;
     }
 }
