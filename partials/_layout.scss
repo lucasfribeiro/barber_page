@@ -1,0 +1,148 @@
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem ;
+}
+
+.bg-home{
+    position: relative;
+}
+
+.bg-home::before{
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: linear-gradient(to bottom, rgba( 6, 18, 30, 0.1), #06121e), url('../assets/bg.svg');
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: .9;
+}
+
+// Main
+
+.hero{
+    color: $white-normal;
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 48px;
+    }
+
+    p{
+        margin: 1rem 0;
+    }
+}
+
+.button-contact{
+    padding: 1rem 2rem;
+    background: $red-normal;
+    color: $white-normal;
+    border-radius: .35rem;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.button-contact:hover{
+    animation: scaleButton .5s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+// Responsividade
+
+@media screen and (max-width:768px){
+    .hero{
+        min-height: 60vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+    .hero h1{
+        font-size: 24px;
+    }
+    .hero p{
+        font-size: 12px;
+    }
+}
+
+// Sobre
+
+.about{
+    background: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 34px 14px 64px 14px;
+
+    img{
+        max-width: 570px;
+    }
+}
+
+.about-content div{
+    flex: 1;
+}
+
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 1.5rem;
+    }
+
+    p{
+        margin-bottom: 1rem;
+        line-height: 150%;
+    }
+}
+
+// Responsividade
+
+@media screen and (max-width:768px){
+    .about-content{
+        flex-direction: column;
+    }
+    .about-description{
+        text-align: center;
+    }
+}

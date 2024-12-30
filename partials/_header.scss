@@ -32,3 +32,48 @@ i{
         transform: translateY(-8px) scale(1.1);
     }
 }
+
+.header-button{
+    border: 1px solid $white-normal;
+    padding: .5rem 1.2rem;
+    border-radius: .35rem;
+    color: $white-normal;
+    background: transparent;
+    transition: background .5s;
+}
+
+.header-button:hover{
+    border: 1px solid $red-light;
+    background: $red-light; 
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+// Responsividade
+
+@media screen and (max-width: 768px){
+
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+
+        i{
+            margin-top: 1.3rem;
+            font-size: 30px; 
+         }
+    }
+
+    .header-logo img{
+        width: 160px;
+        margin-top: 45px;
+    }
+
+    .header-button{
+        display: none;
+    }
+}
