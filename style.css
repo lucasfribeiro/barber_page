@@ -199,6 +199,140 @@ i {
     flex-direction: column;
   }
 }
+.services {
+  background: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 1rem;
+}
+
+.services-content p {
+  line-height: 150%;
+  text-align: center;
+  margin-bottom: 1rem;
+  max-width: 780px;
+}
+
+.haircuts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0 44px 34px 44px;
+}
+
+.hair {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.hair img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hair img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.hair-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #fff;
+  z-index: 2;
+}
+
+.hair-info p {
+  background: #d94140;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .haircuts {
+    flex-direction: column;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 1.3rem;
+  color: #fff;
+}
+.footer p {
+  font-size: 0.8rem;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.wpp-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 99;
+}
+.wpp-button img {
+  max-width: 60px;
+  transition: transform 0.3s ease-in-out;
+}
+.wpp-button img:hover {
+  transform: scale(1.1);
+}
+
+.wpp-button .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  background: #232224;
+  color: #fff;
+  top: 8px;
+  left: -144px;
+  padding: 4px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.8rem;
+  border: 1px solid #353436;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.wpp-button:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .wpp-button img {
+    width: 50px;
+  }
+}
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
